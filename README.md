@@ -1,4 +1,7 @@
 # ZESBEEN
+
+!!! work in progress - not complete nor completely uploaded yet !!!
+
 Arduino project for walking six-legged robot. Pronounce "zesbeen" as "zesbane", it means of course sixlegs.
 
 The project consists of the hardware and software for a robot that walks on six legs whereby each leg has two servo-motors, for DIJ (Thy) and KNIE (knee). The front and hind legs have also an extra servo for the SCHOUDER (shoulder), for making turns.
