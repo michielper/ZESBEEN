@@ -10,4 +10,4 @@ Some of the main classes are:
   MP_BEEST    (beast)   - encapsulating the six legs as a group
 
 The sensor-controller receives real-world information and turns this into Events. The Events lead to state-changes in a state machine. Each state corresponds with a certain movement of ZESBEEN.
-In this way, ZESBEEN is able to walk to a room and avoid obstacles.
+In this way, ZESBEEN is able to walk in a room and avoid obstacles.
