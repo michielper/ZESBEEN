@@ -12,5 +12,5 @@ Some of the main classes are:
   MP_GEWRICHT (joint)   - encapsulating the Servo's.
   MP_BEEST    (beast)   - encapsulating the six legs as a group
 
-The sensor-controller receives real-world information and turns this into Events. The Events lead to state-changes in a state machine. Each state corresponds with a certain movement of ZESBEEN.
+The sensor-controller receives real-world information and turns this into Events. The Events lead to state-changes in a state machine (yet to make). Each state corresponds with a certain movement of ZESBEEN.
 In this way, ZESBEEN is able to walk in a room and avoid obstacles.
