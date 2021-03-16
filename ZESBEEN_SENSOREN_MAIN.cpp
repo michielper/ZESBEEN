@@ -4,7 +4,7 @@
 // 2021-02-05  sonar toegevoegd
 // 2021-02-18	LCD display ipv 4-digit displays
 // 2021-02-20	gebruik snprintf voor LCD display
-// 2021-02-20	voer debug toe
+// 2021-02-20	voeg debug toe
 //-------------------------------------------------
 
 #define DEBUG
