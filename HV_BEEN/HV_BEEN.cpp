@@ -4,6 +4,7 @@
 //	2020-12-15	Nieuwe waarden in loop array, eerste test
 //  2020-12-18	Nieuwe waarden in loop array. Benen moeten meer rechtop (en korter!)
 //  2021-01-03  loop array met factor, debug regels in verschillende functies
+//  2021-03-23	GITHUB TEST
 //-------------------------------------------------------
 
 // #define DEBUG
