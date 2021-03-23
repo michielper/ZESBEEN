@@ -20,6 +20,7 @@ class STUURBEEST
     void ZetDoelLinksaf();
     void Rechtsaf();
     void ZetDoelRechtsaf();
+    void ZetDoelStatus( ZB_STUURSTATUS );
     
     bool	Trigger();
     
@@ -28,4 +29,6 @@ class STUURBEEST
     GEWRICHT*	lvsp;
     GEWRICHT*	lasp;
     GEWRICHT*	schouders[AANTAL_SCHOUDERS];
+    
+    ZB_STUURSTATUS	status;
 };

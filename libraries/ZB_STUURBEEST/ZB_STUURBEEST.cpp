@@ -20,6 +20,7 @@ STUURBEEST::STUURBEEST( GEWRICHT* rvs, GEWRICHT* ras, GEWRICHT* lvs, GEWRICHT* l
 	schouders[1] = rasp;
 	schouders[2] = lvsp;
 	schouders[3] = lasp;
+	status = SB_STAT_MID;
 };
 //---------------------------
 void STUURBEEST::Init()
@@ -44,6 +45,7 @@ void STUURBEEST::Rechtdoor()
 	lvsp->GaAbs( STUUR_RECHT );
 	rasp->GaAbs( STUUR_RECHT );
 	lasp->GaAbs( STUUR_RECHT );
+	status = SB_STAT_MID;
 };
 //---------------------------
 void STUURBEEST::ZetDoelRechtdoor()
@@ -52,6 +54,7 @@ void STUURBEEST::ZetDoelRechtdoor()
 	lvsp->ZetDoel( STUUR_RECHT , SB_VERSN, SB_VERTR, SB_TIKK);
 	rasp->ZetDoel( STUUR_RECHT , SB_VERSN, SB_VERTR, SB_TIKK);
 	lasp->ZetDoel( STUUR_RECHT , SB_VERSN, SB_VERTR, SB_TIKK);
+	status = SB_STAT_MID;
 };
 //---------------------------
 void STUURBEEST::Linksaf()
@@ -60,6 +63,7 @@ void STUURBEEST::Linksaf()
 	lvsp->GaAbs( STUUR_LINKS );
 	rasp->GaAbs( STUUR_RECHTS);
 	lasp->GaAbs( STUUR_RECHTS);
+	status = SB_STAT_LINKS;
 };
 //---------------------------
 void STUURBEEST::ZetDoelLinksaf()
@@ -68,6 +72,7 @@ void STUURBEEST::ZetDoelLinksaf()
 	lvsp->ZetDoel( STUUR_LINKS , SB_VERSN, SB_VERTR, SB_TIKK);
 	rasp->ZetDoel( STUUR_RECHTS, SB_VERSN, SB_VERTR, SB_TIKK);
 	lasp->ZetDoel( STUUR_RECHTS, SB_VERSN, SB_VERTR, SB_TIKK);
+	status = SB_STAT_LINKS;
 };
 //---------------------------
 void STUURBEEST::Rechtsaf()
@@ -76,6 +81,7 @@ void STUURBEEST::Rechtsaf()
 	lvsp->GaAbs( STUUR_RECHTS );
 	rasp->GaAbs( STUUR_LINKS );
 	lasp->GaAbs( STUUR_LINKS  );
+	status = SB_STAT_RECHTS;
 };
 //---------------------------
 void STUURBEEST::ZetDoelRechtsaf()
@@ -84,8 +90,24 @@ void STUURBEEST::ZetDoelRechtsaf()
 	lvsp->ZetDoel( STUUR_RECHTS , SB_VERSN, SB_VERTR, SB_TIKK);
 	rasp->ZetDoel( STUUR_LINKS , SB_VERSN, SB_VERTR, SB_TIKK);
 	lasp->ZetDoel( STUUR_LINKS  , SB_VERSN, SB_VERTR, SB_TIKK);
+	status = SB_STAT_RECHTS;
 };
 //---------------------------
+void STUURBEEST::ZetDoelStatus( ZB_STUURSTATUS doelstatus)
+{
+	switch (doelstatus)
+	{
+		case SS_M:
+			ZetDoelRechtdoor();
+			break;
+		case SS_L:
+			ZetDoelLinksaf();
+			break;
+		case SS_R:
+			ZetDoelRechtsaf();
+			break;
+	}
+}
 
 
 

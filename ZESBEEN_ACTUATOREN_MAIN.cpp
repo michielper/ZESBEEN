@@ -17,7 +17,7 @@
 #include <HV_GEWRICHT.h>
 #include <HV_BEEN.h>
 #include <ZB_ACT_CONFIG.h>
-#include <ZB_GEMEEN.h>
+#include <ZB_STATEMACHINE.h>	// gemeenschappelijk
 #include <HV_BEEST.h>
 #include <MP_INPUTKANAAL.h>
 
@@ -94,7 +94,7 @@ int         	tiknr         	= 0;    // cyclische tikkenteller
 int         	golfval       	= 0;    // golf op IN_MIN tot IN_MAX
 int				loopzijde		= 0;	// 0..1
 
-GEM_LOOPSTATUS		loopstatus;
+GEM_STATUS		loopstatus;
 GEM_RICHTINGSTATUS	richtingstatus;
 
 // toestandsvariabelen
@@ -128,7 +128,7 @@ void	hv_ga_vooruit()			{   fpTrigger = &hv_trigger_vooruit; fpKlaar = &hv_nop; }
 void	hv_ga_achteruit()		{   fpTrigger = &hv_trigger_achteruit; fpKlaar = &hv_nop; }
 	
 //-----------------------------------------
-void zendStatus( GEM_LOOPSTATUS loopStatus)
+void zendStatus( GEM_STATUS loopStatus)
 {
 	int	c,d;
 	switch (loopStatus)
