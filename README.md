@@ -1,6 +1,6 @@
 # ZESBEEN
 
-!!! work in progress - not complete nor completely uploaded yet !!!
+!!! work in progress !!!
 
 Arduino project for walking six-legged robot. Pronounce "zesbeen" as "zesbane", it means of course sixlegs.
 
